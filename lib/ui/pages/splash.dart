@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
 class SplashPage extends StatelessWidget {
-  const SplashPage({super.key});
+  const SplashPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,10 +10,27 @@ class SplashPage extends StatelessWidget {
       backgroundColor: purpleColor,
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: 100,
               width: 100,
+              height: 100,
+              margin: const EdgeInsets.only(bottom: 50),
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    'assets/images/image-logo.png',
+                  ),
+                ),
+              ),
+            ),
+            Text(
+              'FLYON',
+              style: whiteText.copyWith(
+                fontSize: 32,
+                fontWeight: bold,
+                letterSpacing: 10,
+              ),
             ),
           ],
         ),
