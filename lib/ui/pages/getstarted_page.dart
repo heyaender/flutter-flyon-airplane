@@ -56,7 +56,7 @@ class GetStarted extends StatelessWidget {
                       backgroundColor: purpleColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
-                          17,
+                          defaultradius,
                         ),
                       ),
                     ),
