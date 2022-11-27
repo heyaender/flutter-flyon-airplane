@@ -60,7 +60,9 @@ class GetStarted extends StatelessWidget {
                         ),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/signup');
+                    },
                     child: Text(
                       'Get Started',
                       style: whiteText.copyWith(
