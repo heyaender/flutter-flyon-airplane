@@ -1,70 +1,47 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flyon_airplane_app/shared/theme.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+class SignInPages extends StatelessWidget {
+  const SignInPages({Key? key}) : super(key: key);
 
   Widget title() {
-    return Container(
-      margin: EdgeInsets.only(
-        top: 30,
+    return Center(
+      child: Container(
+        margin: EdgeInsets.only(
+          top: 55,
+        ),
+        child: Text(
+          'Welcome Back',
+          style: darkText.copyWith(
+            fontSize: 30,
+            fontWeight: semiBold,
+          ),
+        ),
       ),
-      child: Text(
-        'Join us and get\nyour next journey',
-        style: darkText.copyWith(
-          fontSize: 24,
-          fontWeight: semiBold,
+    );
+  }
+
+  Widget subtitle() {
+    return Center(
+      child: Container(
+        margin: EdgeInsets.only(
+          bottom: 20,
+        ),
+        child: Text(
+          'Please sign in to continue',
+          style: greyText.copyWith(
+            fontSize: 16,
+            fontWeight: light,
+          ),
+          textAlign: TextAlign.center,
         ),
       ),
     );
   }
 
   Widget formSection() {
-    Widget nameInput() {
-      return Container(
-        margin: EdgeInsets.only(
-          bottom: 20,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Full Name',
-              style: darkText.copyWith(
-                fontSize: 14,
-                fontWeight: regular,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 6),
-            ),
-            TextFormField(
-              cursorColor: purpleDarkColor,
-              decoration: InputDecoration(
-                hintText: 'Type your full name here',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                    defaultradius,
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                    defaultradius,
-                  ),
-                  borderSide: BorderSide(
-                    color: purpleColor,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-
     Widget emailInput() {
       return Container(
         margin: EdgeInsets.only(
@@ -110,7 +87,7 @@ class SignUpPage extends StatelessWidget {
     Widget passwordInput() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 20,
+          bottom: 50,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -150,49 +127,7 @@ class SignUpPage extends StatelessWidget {
       );
     }
 
-    Widget hobbyInput() {
-      return Container(
-        margin: EdgeInsets.only(
-          bottom: 30,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Hobby',
-              style: darkText.copyWith(
-                fontSize: 14,
-                fontWeight: regular,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 6),
-            ),
-            TextFormField(
-              cursorColor: purpleDarkColor,
-              decoration: InputDecoration(
-                hintText: 'Type your hobby here',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                    defaultradius,
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                    defaultradius,
-                  ),
-                  borderSide: BorderSide(
-                    color: purpleColor,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-
-    Widget signupButton() {
+    Widget signinButton() {
       return SizedBox(
         width: double.infinity,
         height: 55,
@@ -207,7 +142,7 @@ class SignUpPage extends StatelessWidget {
             ),
           ),
           child: Text(
-            'Sign Up Now',
+            'Sign In',
             style: whiteText.copyWith(
               fontSize: 18,
               fontWeight: medium,
@@ -233,26 +168,24 @@ class SignUpPage extends StatelessWidget {
       ),
       child: Column(
         children: [
-          nameInput(),
           emailInput(),
           passwordInput(),
-          hobbyInput(),
-          signupButton(),
+          signinButton(),
         ],
       ),
     );
   }
 
-  Widget signinTextButton(BuildContext context) {
+  Widget signupTextButton(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(
-        top: 25,
+        top: 40,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Already have an account? ',
+            'Don\'t have an account? ',
             style: greyText.copyWith(
               fontSize: 16,
               fontWeight: light,
@@ -262,11 +195,11 @@ class SignUpPage extends StatelessWidget {
             onTap: () {
               Navigator.pushNamed(
                 context,
-                '/signin',
+                '/signup',
               );
             },
             child: Text(
-              'Sign In',
+              'Sign Up',
               style: purpleText.copyWith(
                 fontSize: 16,
                 fontWeight: medium,
@@ -280,7 +213,6 @@ class SignUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
     return Scaffold(
       backgroundColor: whiteCloudColor,
       body: SafeArea(
@@ -290,8 +222,9 @@ class SignUpPage extends StatelessWidget {
           ),
           children: [
             title(),
+            subtitle(),
             formSection(),
-            signinTextButton(context),
+            signupTextButton(context),
           ],
         ),
       ),
