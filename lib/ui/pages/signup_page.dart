@@ -21,10 +21,75 @@ class SignUpPage extends StatelessWidget {
     );
   }
 
+  Widget formSection() {
+    Widget emailInput() {
+      return Container(
+        margin: EdgeInsets.only(
+          bottom: 20,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Full Name',
+              style: darkText.copyWith(
+                fontSize: 14,
+                fontWeight: regular,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 6),
+            ),
+            TextFormField(
+              cursorColor: purpleDarkColor,
+              decoration: InputDecoration(
+                hintText: 'Input your full name',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(
+                    defaultradius,
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(
+                    defaultradius,
+                  ),
+                  borderSide: BorderSide(
+                    color: purpleColor,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return Container(
+      margin: EdgeInsets.only(
+        top: 30,
+      ),
+      padding: EdgeInsets.symmetric(
+        horizontal: 20,
+        vertical: 30,
+      ),
+      decoration: BoxDecoration(
+        color: whiteColor,
+        borderRadius: BorderRadius.circular(
+          defaultradius,
+        ),
+      ),
+      child: Column(
+        children: [
+          emailInput(),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: whiteCloudColor,
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.symmetric(
@@ -32,6 +97,7 @@ class SignUpPage extends StatelessWidget {
           ),
           children: [
             title(),
+            formSection(),
           ],
         ),
       ),
