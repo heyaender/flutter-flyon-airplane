@@ -15,11 +15,13 @@ class SplashPage extends StatelessWidget {
             Container(
               width: 100,
               height: 100,
-              margin: const EdgeInsets.only(bottom: 50),
+              margin: const EdgeInsets.only(
+                bottom: 50,
+              ),
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                    'assets/images/image-logo.png',
+                    'assets/images/image_logo.png',
                   ),
                 ),
               ),
