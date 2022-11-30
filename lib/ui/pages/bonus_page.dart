@@ -32,6 +32,7 @@ class BonusPage extends StatelessWidget {
                   offset: Offset(0, 10))
             ]),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
@@ -48,7 +49,7 @@ class BonusPage extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        'Andrianto Cahyono Putro',
+                        'Andrianto Putro',
                         style: whiteText.copyWith(
                           fontSize: 20,
                           fontWeight: medium,
@@ -71,10 +72,90 @@ class BonusPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                )
+                ),
+                Text(
+                  'Pay',
+                  style: whiteText.copyWith(
+                    fontSize: 16,
+                    fontWeight: semiBold,
+                  ),
+                ),
               ],
             ),
+            SizedBox(
+              height: 60,
+            ),
+            Text(
+              'Balance',
+              style: whiteText.copyWith(
+                fontSize: 14,
+                fontWeight: light,
+              ),
+            ),
+            Text(
+              'IDR 280.000.000',
+              style: whiteText.copyWith(fontSize: 26, fontWeight: medium),
+            )
           ],
+        ),
+      );
+    }
+
+    Widget cardTitle() {
+      return Container(
+        margin: EdgeInsets.only(
+          bottom: 10,
+        ),
+        child: Text(
+          'Big Bonus 🎉',
+          style: darkText.copyWith(
+            fontSize: 32,
+            fontWeight: semiBold,
+          ),
+        ),
+      );
+    }
+
+    Widget subtitleCard() {
+      return Container(
+        margin: EdgeInsets.only(
+          bottom: 50,
+        ),
+        child: Text(
+          'We give you early credit so that\nyou can buy a flight ticket',
+          style: greyText.copyWith(
+            fontSize: 16,
+            fontWeight: light,
+          ),
+          textAlign: TextAlign.center,
+        ),
+      );
+    }
+
+    Widget buttonStart() {
+      return Container(
+        width: 220,
+        height: 55,
+        margin: EdgeInsets.only(
+          bottom: 151,
+        ),
+        child: TextButton(
+          style: TextButton.styleFrom(
+            backgroundColor: purpleColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(
+                defaultradius,
+              ),
+            ),
+          ),
+          onPressed: () {},
+          child: Text(
+            'Start Flying',
+            style: whiteText.copyWith(
+              fontSize: 18,
+              fontWeight: medium,
+            ),
+          ),
         ),
       );
     }
@@ -86,6 +167,9 @@ class BonusPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             cardBonus(),
+            cardTitle(),
+            subtitleCard(),
+            buttonStart(),
           ],
         ),
       ),
