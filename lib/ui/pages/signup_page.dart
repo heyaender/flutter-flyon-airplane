@@ -22,7 +22,7 @@ class SignUpPage extends StatelessWidget {
     );
   }
 
-  Widget formSection() {
+  Widget formSection(BuildContext context) {
     Widget nameInput() {
       return Container(
         margin: EdgeInsets.only(
@@ -192,12 +192,14 @@ class SignUpPage extends StatelessWidget {
       );
     }
 
-    Widget signupButton() {
+    Widget signupButton(BuildContext context) {
       return SizedBox(
         width: double.infinity,
         height: 55,
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/bonus');
+          },
           style: TextButton.styleFrom(
             backgroundColor: purpleColor,
             shape: RoundedRectangleBorder(
@@ -237,7 +239,7 @@ class SignUpPage extends StatelessWidget {
           emailInput(),
           passwordInput(),
           hobbyInput(),
-          signupButton(),
+          signupButton(context),
         ],
       ),
     );
@@ -290,7 +292,7 @@ class SignUpPage extends StatelessWidget {
           ),
           children: [
             title(),
-            formSection(),
+            formSection(context),
             signinTextButton(context),
           ],
         ),
