@@ -148,7 +148,10 @@ class BonusPage extends StatelessWidget {
               ),
             ),
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamedAndRemoveUntil(
+                context, '/main', (route) => false);
+          },
           child: Text(
             'Start Flying',
             style: whiteText.copyWith(

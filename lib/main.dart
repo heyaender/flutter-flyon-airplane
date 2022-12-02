@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flyon_airplane_app/ui/pages/bonus_page.dart';
 import 'package:flyon_airplane_app/ui/pages/getstarted_page.dart';
+import 'package:flyon_airplane_app/ui/pages/main_page.dart';
 import 'package:flyon_airplane_app/ui/pages/signin_page.dart';
 import 'package:flyon_airplane_app/ui/pages/signup_page.dart';
 import 'package:flyon_airplane_app/ui/pages/splash_page.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/signup': (context) => SignUpPage(),
         '/signin': (context) => SignInPages(),
         '/bonus': (context) => BonusPage(),
+        '/main': (context) => MainPage(),
       },
     );
   }
