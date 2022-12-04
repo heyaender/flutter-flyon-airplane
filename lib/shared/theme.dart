@@ -11,6 +11,7 @@ Color greyColor = Color(0xFF9698A9);
 Color greyLightColor = Color(0xFFDBD7EC);
 Color greenColor = Color(0xFF0EC3AE);
 Color pinkColor = Color(0xFFEB70A5);
+Color transparantColor = Color(0x00000000);
 
 TextStyle darkText = GoogleFonts.poppins(
   color: purpleDarkColor,
