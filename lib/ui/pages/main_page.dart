@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flyon_airplane_app/shared/theme.dart';
-import 'package:flyon_airplane_app/ui/widgets/buttom_navigation_item.dart';
+import 'package:flyon_airplane_app/ui/widgets/custom_bottom_navigation_item.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -25,17 +25,17 @@ class MainPage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            ButtomNavigationItem(
+            CustomBottomNavigationItem(
               imageUrl: 'assets/icons/fi_globe.png',
               isSelected: true,
             ),
-            ButtomNavigationItem(
+            CustomBottomNavigationItem(
               imageUrl: 'assets/icons/fi_book-open.png',
             ),
-            ButtomNavigationItem(
+            CustomBottomNavigationItem(
               imageUrl: 'assets/icons/fi_credit-card.png',
             ),
-            ButtomNavigationItem(
+            CustomBottomNavigationItem(
               imageUrl: 'assets/icons/fi_settings.png',
             ),
           ],

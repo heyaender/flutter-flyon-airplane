@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flyon_airplane_app/shared/theme.dart';
+import 'package:flyon_airplane_app/ui/widgets/custom_button.dart';
 
 class SignInPages extends StatelessWidget {
   const SignInPages({Key? key}) : super(key: key);
@@ -41,7 +42,7 @@ class SignInPages extends StatelessWidget {
     );
   }
 
-  Widget formSection() {
+  Widget formSection(BuildContext context) {
     Widget emailInput() {
       return Container(
         margin: EdgeInsets.only(
@@ -127,28 +128,10 @@ class SignInPages extends StatelessWidget {
       );
     }
 
-    Widget signinButton() {
-      return SizedBox(
-        width: double.infinity,
-        height: 55,
-        child: TextButton(
-          onPressed: () {},
-          style: TextButton.styleFrom(
-            backgroundColor: purpleColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(
-                defaultradius,
-              ),
-            ),
-          ),
-          child: Text(
-            'Sign In',
-            style: whiteText.copyWith(
-              fontSize: 18,
-              fontWeight: medium,
-            ),
-          ),
-        ),
+    Widget signinButton(BuildContext context) {
+      return CustomButton(
+        title: 'Sign In',
+        onTap: () => Navigator.pushNamed(context, '/main'),
       );
     }
 
@@ -170,7 +153,7 @@ class SignInPages extends StatelessWidget {
         children: [
           emailInput(),
           passwordInput(),
-          signinButton(),
+          signinButton(context),
         ],
       ),
     );
@@ -223,7 +206,7 @@ class SignInPages extends StatelessWidget {
           children: [
             title(),
             subtitle(),
-            formSection(),
+            formSection(context),
             signupTextButton(context),
           ],
         ),

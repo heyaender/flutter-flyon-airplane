@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flyon_airplane_app/shared/theme.dart';
+import 'package:flyon_airplane_app/ui/widgets/custom_button.dart';
 
 class BonusPage extends StatelessWidget {
   const BonusPage({Key? key}) : super(key: key);
@@ -133,32 +134,12 @@ class BonusPage extends StatelessWidget {
     }
 
     Widget buttonStart() {
-      return Container(
+      return CustomButton(
+        title: 'Start Flying',
+        onTap: () => Navigator.pushNamed(context, '/main'),
         width: 220,
-        height: 55,
         margin: EdgeInsets.only(
           bottom: 151,
-        ),
-        child: TextButton(
-          style: TextButton.styleFrom(
-            backgroundColor: purpleColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(
-                defaultradius,
-              ),
-            ),
-          ),
-          onPressed: () {
-            Navigator.pushNamedAndRemoveUntil(
-                context, '/main', (route) => false);
-          },
-          child: Text(
-            'Start Flying',
-            style: whiteText.copyWith(
-              fontSize: 18,
-              fontWeight: medium,
-            ),
-          ),
         ),
       );
     }

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flyon_airplane_app/shared/theme.dart';
+import 'package:flyon_airplane_app/ui/widgets/custom_button.dart';
 
 class GetStarted extends StatelessWidget {
   const GetStarted({Key? key}) : super(key: key);
@@ -44,34 +45,14 @@ class GetStarted extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Container(
-                  width: 220,
-                  height: 55,
-                  margin: EdgeInsets.only(
-                    top: 50,
-                    bottom: 80,
-                  ),
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                      backgroundColor: purpleColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                          defaultradius,
-                        ),
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/signup');
-                    },
-                    child: Text(
-                      'Get Started',
-                      style: whiteText.copyWith(
-                        fontSize: 18,
-                        fontWeight: medium,
-                      ),
-                    ),
-                  ),
-                ),
+                CustomButton(
+                    title: 'Get Started',
+                    width: 220,
+                    onTap: () => Navigator.pushNamed(context, '/signup'),
+                    margin: EdgeInsets.only(
+                      top: 50,
+                      bottom: 80,
+                    )),
               ],
             ),
           ),

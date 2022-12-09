@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flyon_airplane_app/shared/theme.dart';
+import 'package:flyon_airplane_app/ui/widgets/custom_button.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -193,29 +194,9 @@ class SignUpPage extends StatelessWidget {
     }
 
     Widget signupButton(BuildContext context) {
-      return SizedBox(
-        width: double.infinity,
-        height: 55,
-        child: TextButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/bonus');
-          },
-          style: TextButton.styleFrom(
-            backgroundColor: purpleColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(
-                defaultradius,
-              ),
-            ),
-          ),
-          child: Text(
-            'Sign Up Now',
-            style: whiteText.copyWith(
-              fontSize: 18,
-              fontWeight: medium,
-            ),
-          ),
-        ),
+      return CustomButton(
+        title: 'Sign Up Now',
+        onTap: () => Navigator.pushNamed(context, '/bonus'),
       );
     }
 
