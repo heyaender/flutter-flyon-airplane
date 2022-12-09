@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:flyon_airplane_app/shared/theme.dart';
+import 'package:flyon_airplane_app/ui/widgets/buttom_navigation_item.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -24,97 +25,18 @@ class MainPage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(),
-                Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/icons/fi_globe.png'),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 30,
-                  height: 2,
-                  decoration: BoxDecoration(
-                    color: purpleColor,
-                    borderRadius: BorderRadius.circular(18),
-                  ),
-                )
-              ],
+            ButtomNavigationItem(
+              imageUrl: 'assets/icons/fi_globe.png',
+              isSelected: true,
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(),
-                Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/icons/fi_book-open.png'),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 30,
-                  height: 2,
-                  decoration: BoxDecoration(
-                    color: transparantColor,
-                    borderRadius: BorderRadius.circular(18),
-                  ),
-                )
-              ],
+            ButtomNavigationItem(
+              imageUrl: 'assets/icons/fi_book-open.png',
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(),
-                Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/icons/fi_credit-card.png'),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 30,
-                  height: 2,
-                  decoration: BoxDecoration(
-                    color: transparantColor,
-                    borderRadius: BorderRadius.circular(18),
-                  ),
-                )
-              ],
+            ButtomNavigationItem(
+              imageUrl: 'assets/icons/fi_credit-card.png',
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(),
-                Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/icons/fi_settings.png'),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 30,
-                  height: 2,
-                  decoration: BoxDecoration(
-                    color: transparantColor,
-                    borderRadius: BorderRadius.circular(18),
-                  ),
-                )
-              ],
+            ButtomNavigationItem(
+              imageUrl: 'assets/icons/fi_settings.png',
             ),
           ],
         ),
