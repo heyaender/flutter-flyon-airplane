@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:flyon_airplane_app/shared/theme.dart';
+import 'package:flyon_airplane_app/ui/widgets/custom_popular_destination.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -55,11 +56,57 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  Widget popularDestination() {
+    return Container(
+      margin: EdgeInsets.only(
+        top: 30,
+      ),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            CustomPopularDestination(
+              title: 'Lake Ciliwung',
+              city: 'Jakarta',
+              image: 'assets/images/image_destination-1.png',
+              rating: 4.8,
+            ),
+            CustomPopularDestination(
+              title: "White House",
+              city: 'Surakarta',
+              image: 'assets/images/image_destination-2.png',
+              rating: 4.4,
+            ),
+            CustomPopularDestination(
+              title: "Bora Bora",
+              city: 'Tahiti',
+              image: 'assets/images/image_destination-3.png',
+              rating: 4.7,
+            ),
+            CustomPopularDestination(
+              title: "Kiyomizu-Dera",
+              city: 'Kyoto',
+              image: 'assets/images/image_destination-4.png',
+              rating: 4.9,
+            ),
+            CustomPopularDestination(
+              title: "Rushmore Tree",
+              city: 'South Dakota',
+              image: 'assets/images/image_destination-5.png',
+              rating: 4.2,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListView(
       children: [
         header(),
+        popularDestination(),
       ],
     );
   }
