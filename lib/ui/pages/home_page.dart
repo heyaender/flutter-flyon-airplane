@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flyon_airplane_app/shared/theme.dart';
 import 'package:flyon_airplane_app/ui/widgets/custom_popular_destination.dart';
+import 'package:flyon_airplane_app/ui/widgets/cutom_new_destination.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -32,7 +33,7 @@ class HomePage extends StatelessWidget {
                   height: 6,
                 ),
                 Text(
-                  'Where to fly today',
+                  'Where to fly today?',
                   style: greyText.copyWith(
                     fontSize: 16,
                     fontWeight: light,
@@ -101,12 +102,67 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  Widget newDestination() {
+    return Container(
+      margin: EdgeInsets.only(
+        top: 30,
+        left: defaultmargin,
+        right: defaultmargin,
+        bottom: 80,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'New This Year',
+            style: darkText.copyWith(fontSize: 18, fontWeight: semiBold),
+          ),
+          Column(
+            children: [
+              CustomNewDestination(
+                title: 'Uluwatu Temple',
+                city: 'Bali',
+                imageUrl: 'assets/images/image_destination-s-1.png',
+                rating: 4.4,
+              ),
+              CustomNewDestination(
+                title: 'Forest Sanctuary',
+                city: 'Bali',
+                imageUrl: 'assets/images/image_destination-s-2.png',
+                rating: 4.2,
+              ),
+              CustomNewDestination(
+                title: 'National Historical Museum',
+                city: 'Jakarta',
+                imageUrl: 'assets/images/image_destination-s-3.png',
+                rating: 4.1,
+              ),
+              CustomNewDestination(
+                title: "Rushmore Tree",
+                city: 'South Dakota',
+                imageUrl: 'assets/images/image_destination-s-4.png',
+                rating: 4.1,
+              ),
+              CustomNewDestination(
+                title: "Bora Bora",
+                city: 'Tahiti',
+                imageUrl: 'assets/images/image_destination-s-5.png',
+                rating: 4.7,
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListView(
       children: [
         header(),
         popularDestination(),
+        newDestination(),
       ],
     );
   }

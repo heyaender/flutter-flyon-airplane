@@ -55,8 +55,8 @@ class MainPage extends StatelessWidget {
       backgroundColor: const Color(0xffF6F7F8),
       body: Stack(
         children: [
-          bottomNavigation(),
           buildContent(),
+          bottomNavigation(),
         ],
       ),
     );

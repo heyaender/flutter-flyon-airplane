@@ -56,17 +56,9 @@
 		<data>
 		uj0rsoGoept8QnNmAxDzDxFbxQ4=
 		</data>
-		<key>flutter_assets/assets/icons/icon_star.svg</key>
-		<data>
-		QtUWUAfnpJ0XA1/aBvayo2gwlyQ=
-		</data>
 		<key>flutter_assets/assets/icons/icon_unavailable.png</key>
 		<data>
 		8M0p6u0VCDD1POmJLQ+e6ycRDrY=
-		</data>
-		<key>flutter_assets/assets/icons/logo_flyon.svg</key>
-		<data>
-		TrNIvaq78qGYaVXi17VEumXvrDs=
 		</data>
 		<key>flutter_assets/assets/images/image_checkout.png</key>
 		<data>
@@ -142,7 +134,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		7Ek7iVuYLa+wn0Add+cIWcXbDtE=
+		AJL+yFqaIWieR+/jQcXkFSo8ms0=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -243,25 +235,11 @@
 			7+3VJ7u/3C4N+Fe7tyUChA+s08IH6QvjfnlcuVL9kjk=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/icons/icon_star.svg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Bq9osSnO+wqTkjbbuS4RqyshyFVmuOTygo74RMTpZaA=
-			</data>
-		</dict>
 		<key>flutter_assets/assets/icons/icon_unavailable.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			z7uc0f6wR0duESd3POsQ0a+teD6cdBhl/FfQWPQAUzs=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/icons/logo_flyon.svg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			rkKub4fXQVHzE2/dOkXamCCnx8zfexRN9dYvwEfRSYM=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/image_checkout.png</key>
@@ -394,7 +372,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xrseoEgdJ3L4+9Yj8/9lTR96Jq4RyQEMr8vXJHu1PVM=
+			+GEtZNYDUuGvDmgoC45ux1Jd/vADamqutJGe1vJGHW4=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
