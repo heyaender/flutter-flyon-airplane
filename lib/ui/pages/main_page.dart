@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flyon_airplane_app/shared/theme.dart';
+import 'package:flyon_airplane_app/ui/pages/home_page.dart';
 import 'package:flyon_airplane_app/ui/widgets/custom_bottom_navigation_item.dart';
 
 class MainPage extends StatelessWidget {
@@ -44,6 +45,10 @@ class MainPage extends StatelessWidget {
     );
   }
 
+  Widget buildContent() {
+    return HomePage();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,6 +56,7 @@ class MainPage extends StatelessWidget {
       body: Stack(
         children: [
           bottomNavigation(),
+          buildContent(),
         ],
       ),
     );
