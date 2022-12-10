@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flyon_airplane_app/shared/theme.dart';
 import 'package:flyon_airplane_app/ui/widgets/custom_button.dart';
+import 'package:flyon_airplane_app/ui/widgets/custom_form_field.dart';
 
 class SignInPages extends StatelessWidget {
   const SignInPages({Key? key}) : super(key: key);
@@ -44,86 +45,21 @@ class SignInPages extends StatelessWidget {
 
   Widget formSection(BuildContext context) {
     Widget emailInput() {
-      return Container(
+      return CustomFormField(
+        labelText: "Email Address",
+        hintText: "example@gmail.com",
         margin: EdgeInsets.only(
           bottom: 20,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Email Address',
-              style: darkText.copyWith(
-                fontSize: 14,
-                fontWeight: regular,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 6),
-            ),
-            TextFormField(
-              cursorColor: purpleDarkColor,
-              decoration: InputDecoration(
-                hintText: 'example@gmail.com',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                    defaultradius,
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                    defaultradius,
-                  ),
-                  borderSide: BorderSide(
-                    color: purpleColor,
-                  ),
-                ),
-              ),
-            ),
-          ],
         ),
       );
     }
 
     Widget passwordInput() {
-      return Container(
+      return CustomFormField(
+        labelText: "Password",
+        hintText: "Type your password here",
         margin: EdgeInsets.only(
           bottom: 50,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Password',
-              style: darkText.copyWith(
-                fontSize: 14,
-                fontWeight: regular,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 6),
-            ),
-            TextFormField(
-              obscureText: true,
-              cursorColor: purpleDarkColor,
-              decoration: InputDecoration(
-                hintText: 'Type your password here',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                    defaultradius,
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                    defaultradius,
-                  ),
-                  borderSide: BorderSide(
-                    color: purpleColor,
-                  ),
-                ),
-              ),
-            ),
-          ],
         ),
       );
     }
