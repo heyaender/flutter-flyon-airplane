@@ -84,7 +84,7 @@ class BonusPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 60,
+              height: 50,
             ),
             Text(
               'Balance',

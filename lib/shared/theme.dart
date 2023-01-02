@@ -15,6 +15,11 @@ Color yellowColor = Color(0xFFFFA235);
 Color transparantColor = Color(0x00000000);
 Color blackColor = Color(0xFF000000);
 
+// SEAT COLOR
+Color unavailableSeatColor = Color(0xFFEBECF1);
+Color availableSeatColor = Color(0xFFE0D9FF);
+Color selectedSeatColor = Color(0xFF5C40CC);
+
 TextStyle darkText = GoogleFonts.poppins(
   color: purpleDarkColor,
 );
