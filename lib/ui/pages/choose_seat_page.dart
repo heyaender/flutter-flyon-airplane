@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flyon_airplane_app/shared/theme.dart';
+import 'package:flyon_airplane_app/ui/widgets/custom_button.dart';
 import 'package:flyon_airplane_app/ui/widgets/seat_item.dart';
 
 class ChooseSeatPage extends StatelessWidget {
@@ -378,8 +379,76 @@ class ChooseSeatPage extends StatelessWidget {
                 ],
               ),
             ),
+
+            // NOTE : SEAT CHOICE
+            Container(
+              margin: EdgeInsets.only(
+                top: 32,
+                left: 22,
+                right: 22,
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Your Seat",
+                        style: greyText.copyWith(
+                          fontSize: 14,
+                          fontWeight: light,
+                        ),
+                      ),
+                      Text(
+                        'A3, B3',
+                        style: darkText.copyWith(
+                          fontSize: 16,
+                          fontWeight: medium,
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 18,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Total",
+                        style: greyText.copyWith(
+                          fontSize: 14,
+                          fontWeight: light,
+                        ),
+                      ),
+                      Text(
+                        'IDR 540.000.000',
+                        style: purpleText.copyWith(
+                          fontSize: 16,
+                          fontWeight: semiBold,
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
+      );
+    }
+
+    Widget buttonCheckout() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: 30,
+          bottom: 30,
+        ),
+        child: CustomButton(
+            title: 'Continue to Checkout',
+            onTap: () {
+              Navigator.pushNamed(context, '/checkout');
+            }),
       );
     }
 
@@ -394,6 +463,7 @@ class ChooseSeatPage extends StatelessWidget {
             title(),
             seatStatus(),
             selectSeat(),
+            buttonCheckout(),
           ],
         ),
       ),
