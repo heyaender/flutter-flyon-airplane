@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)"
+options: "0af3a278cd3a766f347964f9ce957ce39f1e6973ab9ad3b5bbbb4671d17bbd5f"
+build_start_time: [1672977041, 337993144]
+build_end_time: [1672977041, 399281978]
+inputs:
+  "/Users/putroandrianto/FlutterProjects/flyon-airplane-app/macos/Flutter/GeneratedPluginRegistrant.swift": !private [1672977017, 722935676]
+  "/Users/putroandrianto/FlutterProjects/flyon-airplane-app/macos/Runner/AppDelegate.swift": !private [1655929743, 0]
+  "/Users/putroandrianto/FlutterProjects/flyon-airplane-app/macos/Runner/MainFlutterWindow.swift": !private [1655929743, 0]
